@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 function ManageProductsTable() {
   // const [vehicles, setVehicles] = useState([])
@@ -28,6 +28,7 @@ function ManageProductsTable() {
               <td>{vehicle.model}</td>
               <td>{vehicle.rent}</td>
               <td>
+                <Link to={`/vehicle/${vehicle?._id}`}><button className="btn btn-success">D</button></Link>
                 <button className="btn btn-warning">X</button>
                 <button className="btn btn-outline">U</button>
               </td>
