@@ -7,6 +7,7 @@ import AddProduct from "./pages/AddProduct/AddProduct";
 import ManageProducts from "./pages/ManageProducts/ManageProducts";
 import VehicleDetails from "./pages/ProductDetails/VehicleDetails";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
+import PostTeam from "./pages/PostTeam/PostTeam";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +33,7 @@ function App() {
       path: "/add-product",
       element: <AddProduct />,
     },
+    
     {
       path: "/add-review",
       element: <AddReview />,
@@ -50,7 +52,12 @@ function App() {
       loader: function({params}){
         return fetch(`http://localhost:3000/vehicle/${params.id}`);
       }
-    } 
+    },
+
+    {
+      path: "/add-teammate",
+      element: <PostTeam />,
+    },
   ]);
 
   return <RouterProvider router={router}></RouterProvider>;
