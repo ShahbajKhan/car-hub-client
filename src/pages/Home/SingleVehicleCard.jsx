@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function SingleVehicleCard({ vehicle }) {
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
@@ -10,7 +12,9 @@ function SingleVehicleCard({ vehicle }) {
         <div className="card-actions justify-between">
 
           <button className="btn btn-primary">$ {vehicle?.rent} per-hour</button>
+          <Link to={`/vehicle/${vehicle?._id}`}>
           <button className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
