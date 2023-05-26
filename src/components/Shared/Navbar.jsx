@@ -52,7 +52,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        <Link to="/team" className="btn">Explore Team</Link>
       </div>
     </div>
   );
