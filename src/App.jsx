@@ -6,6 +6,7 @@ import AddReview from "./pages/AddReview/AddReview";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import ManageProducts from "./pages/ManageProducts/ManageProducts";
 import VehicleDetails from "./pages/ProductDetails/VehicleDetails";
+import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,7 +43,14 @@ function App() {
         
         return fetch(`http://localhost:3000/vehicle/${params.id}`)
       }
-    }
+    },
+    {
+      path: "/update-vehicle/:id",
+      element: <UpdateProduct></UpdateProduct>,
+      loader: function({params}){
+        return fetch(`http://localhost:3000/vehicle/${params.id}`);
+      }
+    } 
   ]);
 
   return <RouterProvider router={router}></RouterProvider>;

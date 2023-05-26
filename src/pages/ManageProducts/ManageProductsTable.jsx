@@ -28,9 +28,13 @@ function ManageProductsTable() {
               <td>{vehicle.model}</td>
               <td>{vehicle.rent}</td>
               <td>
-                <Link to={`/vehicle/${vehicle?._id}`}><button className="btn btn-success">D</button></Link>
+                <Link to={`/vehicle/${vehicle?._id}`}>
+                  <button className="btn btn-success">D</button>
+                </Link>
                 <button className="btn btn-warning">X</button>
-                <button className="btn btn-outline">U</button>
+                <Link to={`/update-vehicle/${vehicle?._id}`}>
+                  <button className="btn btn-outline">U</button>
+                </Link>
               </td>
             </tr>
           ))}
