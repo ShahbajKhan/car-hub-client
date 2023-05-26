@@ -3,6 +3,7 @@ import Navbar from "../../components/Shared/Navbar";
 import ContactForm from "../ContactUs/ContactForm";
 import AboutUs from "./AboutUs";
 import HomeBanner from "./HomeBanner";
+import OurVehicles from "./OurVehicles";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <div className="max-w-6xl mx-auto">
         <Navbar></Navbar>
         <HomeBanner></HomeBanner>
+        <OurVehicles></OurVehicles>
         <AboutUs></AboutUs>
         <ContactForm></ContactForm>
       </div>

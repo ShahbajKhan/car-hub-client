@@ -11,6 +11,9 @@ function App() {
     {
       path: "/",
       element: <Home />,
+      loader: function () {
+        return fetch(`http://localhost:3000/all-vehicles`);
+      },
     },
     {
       path: "/contact-us",
